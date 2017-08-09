@@ -143,6 +143,11 @@ module.exports = {
 
 						date = date.calendar(referenceTime);
 						break;
+					case 'tz':
+            					if(typeof date.tz == "function"){
+					      		date = date.tz(args.shift());
+					    	}
+					    	break;
 
 					default:
 						// Format
